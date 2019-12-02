@@ -1,0 +1,4 @@
+
+django apps
+eg. blog, portfolio
+
