@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script>
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+      />;
+    </script>
+  </head>
+  <body>
+      <div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {%for job in jobs.all %}
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src={{job.image.url}}>
+                <div class="card-body">
+                    <p class="card-text">{{job.summary}}</p>
+                    <img src={{job.image}}>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>  
+    </div>
+  </body>
+</html>
